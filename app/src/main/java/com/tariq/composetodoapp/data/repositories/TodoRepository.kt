@@ -2,9 +2,11 @@ package com.tariq.composetodoapp.data.repositories
 
 import com.tariq.composetodoapp.data.TodoDao
 import com.tariq.composetodoapp.data.models.ToDoTask
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
+@ViewModelScoped
 class TodoRepository @Inject constructor(
     private val todoDao: TodoDao
 ) {
