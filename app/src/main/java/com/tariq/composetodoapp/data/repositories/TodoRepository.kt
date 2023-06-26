@@ -8,7 +8,6 @@ import javax.inject.Inject
 class TodoRepository @Inject constructor(
     private val todoDao: TodoDao
 ) {
-
     val getAllTasks: Flow<List<ToDoTask>> = todoDao.getAllTasks()
     val sortByLowPriority: Flow<List<ToDoTask>> = todoDao.sortByLowPriority()
     val sortByHighPriority: Flow<List<ToDoTask>> = todoDao.sortByHighPriority()
